@@ -1,5 +1,8 @@
 from typing import List
-from .sorting_base import SortingAlgorithm
+try:
+    from .sorting_base import SortingAlgorithm
+except ImportError:
+    from sorting_base import SortingAlgorithm
 
 
 class SelectionSort(SortingAlgorithm):
