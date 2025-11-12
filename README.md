@@ -61,3 +61,32 @@ python3 test/test_sorting.py
 - Maximum size: 2x10^5 elements
 - Algorithms: bubble, selection, quick, merge
 - Order: ascending or descending
+
+Notes and behavior
+
+- The `main.py` script now automatically creates a `reports/` directory next to itself and writes
+	results to `reports/output.txt` (one result or message per input line). You don't need to redirect
+	output unless you prefer a different location.
+
+- For safety/performance, if a line requests `bubble` or `selection` on a large input (size &gt; 10000),
+	the program will automatically switch to `merge` (and will write a warning in the report). This
+	prevents very long-running O(n^2) sorts on large inputs. If you want to force a particular
+	algorithm regardless of size, run the sorting logic from the classes directly.
+
+- Input parsing is more robust: malformed integers or mismatched size values are reported per-line in
+	the report file instead of causing an uncaught exception.
+
+Git usage (assignment requirement)
+
+This repository must be tracked with git for the assignment. Example workflow (run from the project root):
+
+```bash
+git add Q3
+git commit -m "Implement sorting package, tests, and report writing"
+git tag -a sorting_submission_v1 -m "Submission v1"
+# Optionally push to a remote if you use one:
+git push --follow-tags origin main
+```
+
+Make sure to create a branch or tag as required by your instructor. I didn't modify git metadata in this
+workspace automatically; perform the commits/tags locally when you're ready.
