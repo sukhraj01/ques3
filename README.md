@@ -25,12 +25,14 @@ Sorting_Package/
 ### Running with Input File
 
 ```bash
+cd Sorting_Package
 python3 main.py input.txt
 ```
 
 ### Redirecting Output
 
 ```bash
+cd Sorting_Package
 python3 main.py input.txt > reports/output.txt
 ```
 
@@ -52,6 +54,7 @@ merge | descending | 6 | -5,3,-1,7,-8,0
 ### Running Tests
 
 ```bash
+cd Sorting_Package
 python3 test/test_sorting.py
 ```
 
@@ -78,15 +81,15 @@ Notes and behavior
 
 Git usage (assignment requirement)
 
-This repository must be tracked with git for the assignment. Example workflow (run from the project root):
+This repository must be tracked with git for the assignment. Example workflow:
 
 ```bash
-git add Q3
+git add Sorting_Package
 git commit -m "Implement sorting package, tests, and report writing"
 git tag -a sorting_submission_v1 -m "Submission v1"
-# Optionally push to a remote if you use one:
-git push --follow-tags origin main
+# Push to remote:
+git push origin <branch-name>
+git push --tags
 ```
 
-Make sure to create a branch or tag as required by your instructor. I didn't modify git metadata in this
-workspace automatically; perform the commits/tags locally when you're ready.
+The project uses git branches and tags as required by the assignment.
