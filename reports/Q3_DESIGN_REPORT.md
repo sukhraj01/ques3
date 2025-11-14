@@ -250,6 +250,3 @@ PASSED: test_bubble_sort_descending
 
 ---
 
-**Author**: Automated Design Report for Q3 Submission
-**Date**: November 2024
-**Version**: 1.0
